@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --card-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.weather-app {
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    transition: all 0.3s ease;
+}
+
+.weather-app:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.search {
+    display: flex;
+    margin: 1.5rem 0;
+    gap: 0.5rem;
+}
+
+input {
+    padding: 0.75rem;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+    flex-grow: 1;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button {
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.weather-info {
+    margin-top: 1.5rem;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.weather-icon i {
+    transition: transform 0.5s ease;
+}
+
+.weather-icon i:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.details p {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.details i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+#city-name {
+    margin: 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 400px) {
+    .weather-app {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
